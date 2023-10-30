@@ -118,7 +118,7 @@ if user_number:
     st.write(f"こんにちは、{user_number}さん！")
     # 初期済みでない場合は初期化処理を行う
     if not firebase_admin._apps:
-            cred = credentials.Certificate('chat3-109ec-firebase-adminsdk-2zc5h-08e4bf5e34') 
+            cred = credentials.Certificate('chat3-109ec-firebase-adminsdk-2zc5h-08e4bf5e34.json') 
             default_app = firebase_admin.initialize_app(cred)
     db = firestore.client()
     #doc_ref = db.collection(user_number)
