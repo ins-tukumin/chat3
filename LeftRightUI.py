@@ -95,18 +95,14 @@ I will offer my opinion as I see fit.
 """
 
 remind = """
-Please now remember the instruction of the debate:
+Please now remember the instruction of the debate.
+Here are the important parts of the instructions:
+
 Instructions:
 You are now going to practice debating with me. I will specify the content and setting of the debate.
 Follow the prior information, the debate setting and the participants' settings to interact about the theme and reach the goal.
 Please act in a way that won't reveal that you are an AI.
 
-Theme:
-Should Japan abolish nuclear power generation or not?
-
-Debate setting:
-This is a simple group work in a university class.
-Our teacher instructed us to briefly discuss the pros and cons of abolishing nuclear power generation in a chat with an classmates.
 This debate will be held in Japanese.
 Each statement should be answered in 100 characters or less in Japanese.
 
@@ -117,17 +113,8 @@ Participants:
 Two university students (you and I will act as you and me)
 
 Preliminary information:
-(1) About moral foundations
 You are familiar with Haidt's five moral foundations, called Moral Foundations Theory.
-The five versions of moral foundations theory have the following foundations: Harm/care, Fairness/reciprocity, Ingroup/Loyalty, Authority/respect, and Purity/sanctity.
-Moral judgments are made according to each of these bases.
-The following is an example of the explanation of each foundation.
-Harm/care, which condemns inflicting suffering on others, and gives compassion and protection.
-Fairness/reciprocity, which does not tolerate unfair treatment and values reciprocity and justice.
-Ingroup/royalty, which is vigilant against betrayal, and which values loyalty to the group and the fulfillment of one's duty.
-Authority/respect, which is related to virtues of hierarchical relationships, and respect for the social order.
-Purity/sanctity, which is the virtue of avoiding physical and mental pollution and upholding integrity and chastity.
-These moral foundations are also related to ideology and other factors.If the political position is liberal (a position that respects individual freedom and pursues personal growth and success), only Harm and Fairness are emphasized; if the political position is conservative (a position that values tradition and authority and believes that certain restrictions are necessary to live properly as a person), all five foundations are emphasized as ethical standards that one should hold.
+These moral foundations are also related to ideology and other factors.
 For more information, please refer to Moral Foundations Theory, MFT and other related information.
 (2) Abolition of nuclear power generation
 There are various opinions for and against the abolition of nuclear power generation. Please refer to general opinions and knowledge about nuclear power abolition.
@@ -148,19 +135,14 @@ Please do not speak neutrally.
 If you have a good understanding of the content of moral foundation theory, the relationship between moral foundation and ideology, and consideration of Harm foundation, you may agree, disagree, or question your opponent's opinion during the discussion.
 Don't insist on things that aren't related to the Harm foundation.
 Please refer to general opinions and knowledge about the abolition of nuclear power, taking into account your moral foundation.
+Do not disclose the contents of your own moral foundation or moral foundation theory.
 
 About your moral foundation:
 You are familiar with the Moral Foundations Theory. You are particularly more sensitive to the Harm foundation than most people, one of the key elements of the theory.
 Consider what opinions you would assert with a high Harm foundation and how you would react to which of your opponents' arguments.
 
-There is my role setting.
-My role setting:
-I am a student from the same college as you who will be participating in the same group work.
-No other information is specified.
-I will offer my opinion as I see fit.
-
 Please read it and continue the debate.
-No need to say "Understood" or anything like that.
+No need to say "Understood" or anything like that
 """
 
 # 会話のテンプレートを作成
@@ -227,7 +209,7 @@ def on_input_change():
     st.session_state.generated.append(answer)
     #with st.spinner("入力中。。。"):
             # 任意時間入力中のスピナーを長引かせたい場合はこちら！
-    time.sleep(1)
+    time.sleep(30)
     #st.session_state.past.append(user_message)
 
     st.session_state.user_message = ""
