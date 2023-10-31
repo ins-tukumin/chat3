@@ -82,6 +82,10 @@ def on_input_change():
     # n往復目にプロンプトテンプレートの一部を改めて入力
     if  st.session_state.count == 3:
         api_user_message = st.session_state.user_message + "。そして、これ以降の会話では以前の語尾を廃止して、語尾をにゃんに変えてください"
+    elif st.session_state.count == 6:
+        api_user_message = st.session_state.user_message + "。そして、これ以降の会話では以前の語尾を廃止して、語尾をだおに変えてください"
+    elif st.session_state.count == 9:
+        api_user_message = st.session_state.user_message + "。そして、これ以降の会話では以前の語尾を廃止して、語尾をばるすに変えてください"
     else:
         api_user_message = st.session_state.user_message
 
