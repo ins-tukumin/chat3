@@ -1,5 +1,6 @@
 # Harm
 # ライブラリをインポート
+# key=str(i) を各botへ忘れずに!
 import streamlit as st
 from streamlit_chat import message
 
@@ -247,7 +248,7 @@ chat_placeholder = st.empty()
 # 会話履歴を表示
 with chat_placeholder.container():
     for i in range(len(st.session_state.generated)):
-        message(st.session_state.past[i],is_user=True)
+        message(st.session_state.past[i],is_user=True, key=str(i))
         message(st.session_state.generated[i])
 
 # 質問入力欄と送信ボタンを設置
