@@ -182,7 +182,7 @@ def redirect_to_url(url):
 # st.write("議論を行いましょう！")
 user_number = st.text_input("学籍番号を半角で入力してエンターを押してください")
 if user_number:
-    st.write(f"こんにちは、{user_number}さん！")
+    #st.write(f"こんにちは、{user_number}さん！")
     # 初期済みでない場合は初期化処理を行う
     if not firebase_admin._apps:
             cred = credentials.Certificate('chat3-109ec-firebase-adminsdk-2zc5h-08e4bf5e34.json') 
