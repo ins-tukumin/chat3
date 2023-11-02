@@ -138,7 +138,7 @@ if "past" not in st.session_state:
 # 会話のターン数をカウント
 if 'count' not in st.session_state:
     st.session_state.count = 0
-st.write(st.session_state.count)
+#st.write(st.session_state.count) # デバッグ用
 
 # 送信ボタンがクリックされた後の処理を行う関数を定義
 def on_input_change():
