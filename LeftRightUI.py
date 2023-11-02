@@ -153,7 +153,7 @@ def on_input_change():
 
     user_message = st.session_state.user_message
     conversation = load_conversation()
-    with st.spinner("入力中。。。"):
+    with st.spinner("相手からの返信を待っています。。。"):
         time.sleep(5)
         answer = conversation.predict(input=user_message)
     st.session_state.generated.append(answer)
